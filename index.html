@@ -4,23 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Budget</title>
-    <link rel="stylesheet" href="/reset.css">
-    <link rel="stylesheet" href="/main.css">
+    <link rel="stylesheet" href="http://165.227.191.88/pb/reset.css">
+    <link rel="stylesheet" href="http://165.227.191.88/pb/main.css">
+
+
+
+
 </head>
 <body>
-
+<!--This is a semantic Change-->
+    <div class="menu" role="navigation">
+    </div>
     <div class="menu">
         <ul>
             <li><a href="/">Homepage</a></li>
             <li><a href="/about.html">About</a></li>
             <li><a href="/login.html">Login</a></li>
-            <li><a href="https://google.com">Google</a></li>
+<!--This is A11y Change-->
+            <li><a href="https://google.com" aria-label="Go to Google">Google</a></li>
+<!--This is an A11y Change-->
+            <li><a href="https://fabionolasco.com/">Visit our Main Website</a></li>
         </ul>
     </div>
 
     <div class="hero">
-        <h1>Personal Budget</h1>
+     <head> 
+<!--This is SEO Change-->
+    <title> One stop solution for your personal budget</title>
+        <h1>Personal Budget</h1> 
         <h2>A personal-budget management app</h2>
+    </head>
+    
+    
     </div>
 
     <div class="container center">
@@ -58,7 +73,7 @@
                     This app is free!!! And you are the only one holding your data!
                 </p>
             </div>
-    
+   
             <div class="text-box">
                 <h1>Stay on track</h1>
                 <p>
@@ -74,32 +89,46 @@
                     What if your clothing budget ended? You will get an alert. The goal is to never go over the budget.
                 </p>
             </div>
-    
-            <div class="text-box">
+    <!--This is Semantic Change-->
+            <header class="text-box">
                 <h1>Results</h1>
                 <p>
                     People who stick to a financial plan, budgeting every expense, get out of debt faster!
                     Also, they to live happier lives... since they expend without guilt or fear... 
                     because they know it is all good and accounted for.
                 </p>
-            </div>
-    
-            <div class="text-box">
+            </header>
+ <!--This is Semantic Change-->   
+            <header class="text-box">
                 <h1>Free</h1>
                 <p>
                     This app is free!!! And you are the only one holding your data!
                 </p>
-            </div>
+            </header>
 
         </div>
 
     </div>
 
-    <div class="bottom">
+    <footer class ="bottom">
+<!--This is SEO Change-->
+        <p>This website helps with all the personal budget issue and help to solve the problem</p>
         <div class="center">
-            All rights reserved &copy; Fabio Nolasco
+            All rights reserved &copy; Deepthi Meher
         </div>
-    </div>
+    </footer>
+<!--This is SEO Change-->
+<footer>
+    <ul>
+    <li><a href="https://fabionolasco.com/">Contact US</a></li>
+    <div class="center">
+        Please visit website for more information
+    </ul>
+</footer>
+<!--This A11y Change-->
+<label for="email address">email address: </label>
+<input type="text" id="email address" aria-describedby="email address-description">
+<p id="email address">Please enter your email address to get notify about our upcoming events</p>
 
 </body>
 </html>
