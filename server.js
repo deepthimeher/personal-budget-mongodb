@@ -10,8 +10,8 @@ app.get('/hello', (req, res) => {
     res.send('Hello World!');
 });
 
-app.get('/budget', (req, res) => {
-    const url = 'http://localhost:3000/budget';
+app.get('/jn', (req, res) => {
+    const url = 'http://localhost:3000/jn';
 
     fetch(url)
     .then(response => response.json())
