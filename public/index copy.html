@@ -137,10 +137,12 @@
             </div>
 
         </div>
-        <div class="deepthi" id="this">
+        <aside>
+            <h2>This is my D3js Chart</h2>
+            <h3>It is fetching data from my-data.json file</h3>    
             <button class="randomize">randomize</button>
-            <h1>D3JS Chart</h1>
-        </div>
+            
+        </aside>
 
     </div>
     <footer class ="bottom">
@@ -214,9 +216,11 @@
 }
 
     getBudget();
+</script>
     // createChart();
-    var svg = d3.select("#this")
-	.append("svg")
+<script>    
+
+var svg = d3.select("aside").append("svg")
 	.append("g")
 
 svg.append("g")
@@ -226,8 +230,8 @@ svg.append("g")
 svg.append("g")
 	.attr("class", "lines");
 
-var width = 960,
-    height = 450,
+var width = 460,
+    height = 250,
 	radius = Math.min(width, height) / 2;
 
 var pie = d3.layout.pie()
@@ -249,23 +253,19 @@ svg.attr("transform", "translate(" + width / 2 + "," + height / 2 + ")");
 var key = function(d){ return d.data.label; };
 
 var color = d3.scale.ordinal()
-	.domain(["Eat out", "Rent", "Grocery", "Insurance", "Skin Care", "Saving for New york Trip", "Shopping"])
 	.range(["#98abc5", "#8a89a6", "#7b6888", "#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
 
+d3.json("/jn",function(data){
+    console.log(data);
+    change(data);
+
+});
 function randomData (){
 	var labels = color.domain();
 	return labels.map(function(label){
 		return { label: label, value: Math.random() }
 	});
 }
-
-d3.json("C:\dev\_tmp\personal-budget1\data.json", function(error, data) {
-    if (error) throw error;
-
-    // Call the change function with the fetched data
-    change(data);
-});
-
 
 change(randomData());
 

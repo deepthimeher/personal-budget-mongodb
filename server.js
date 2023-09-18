@@ -16,7 +16,7 @@ app.get('/budget', (req, res) => {
     fetch(url)
     .then(response => response.json())
     .then(data => {
-        res.json(data);
+        res.json(data.json);
   });
     //res.json(budget);
 });
