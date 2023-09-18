@@ -11,12 +11,13 @@ app.get('/hello', (req, res) => {
 });
 
 app.get('/budget', (req, res) => {
-    const url = 'http://localhost:3000/jn';
+    const url = 'http://localhost:3000/budget';
 
     fetch(url)
     .then(response => response.json())
     .then(data => {
         res.json(data.json);
+        console.log(data);
   });
     //res.json(budget);
 });
